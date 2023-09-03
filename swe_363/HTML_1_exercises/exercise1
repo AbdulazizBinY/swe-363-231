@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Abdulaziz Personal blog</title>
+    </head>
+    <body>
+        <img src="assests/Personal_Blog.jpeg" alt="Photo that describe the website" style="width: 650px">
+        <h1>Welcome to My Personal Blog page!</h1>
+        
+
+        <h3>Information about this website:</h3>
+        <p>In this website, <strong>I will talk about myself and show my projects.</strong> </p>
+    </body>
+</html>
