@@ -2,18 +2,30 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Blog site.">
+    <meta name="keywords" content="Personal, HTML">
+    <meta name="author" content="Abdulaziz Binyabis">
+    <link rel="stylesheet" href="style.css">
     <title>Contact Us</title>
 </head>
 
 <body>
-    <h1>Contact Information</h1>
+    <nav>
+        <ul>
+            <li><a class="active" href="contactPage.html" style="color: white;">Contact</a></li>
+            <li><a href="detailsPage.html" style="color: white;">Details </a></li>
+            <li> <a href="mainPage.html">About</a></li>
+        </ul>
+    </nav>
+    <h1 style="color: white;">Contact Information</h1>
     <!-- P tage that have my information contact -->
     <p><strong>Email:</strong> <a href="mailto:Abdulazizbinyabis@gmail.com">Abdulazizbinyabis@gmail.com</a></p>
     <p><strong>Phone:</strong> <a href="tel:+966555029876">+966555029876</a></p>
     <p><strong>LinkedIn:</strong> <a
             href="https://www.linkedin.com/in/abdulaziz-binyabis-458117224/">@Abdulazizbinyabis</a></p>
     <!-- Form that allows users to send my an email **THIS IS NOT FUNCTIONAL** -->
-    <h3>Contact form:</h3>
+    <h3 style="color: white;">Contact form:</h3>
     <form action="conformationPage.html" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br>
@@ -26,11 +38,6 @@
 
         <input type="submit" value="Submit">
     </form>
-    <ul>
-        <li>
-            <p><a href="mainPage.html">Main page</a></p>
-        </li>
-    </ul>
 </body>
 
 </html>
