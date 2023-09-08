@@ -1,61 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal Blog site.">
+    <meta name="description" content="Personal Blog Site">
     <meta name="keywords" content="Personal, HTML">
     <meta name="author" content="Abdulaziz Binyabis">
     <link rel="stylesheet" href="style.css">
     <title>Details Page</title>
-</head>Í
+</head>
 
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="contactPage.html" style="color: white;">Contact</a></li>
-                <li><a class="active" href="detailsPage.html" style="color: white;">Details </a></li>
-                <li> <a href="mainPage.html">About</a></li>
+                <li><a href="contactPage.html">Contact</a></li>
+                <li><a href="detailsPage.html" class="active">Details</a></li>
+                <li><a href="mainPage.html">About</a></li>
             </ul>
         </nav>
-        <h2 style="color: white;">The details page shows my personal information and my hobbies.</h2>
+        <h2>The details page shows my personal information and my hobbies.</h2>
     </header>
-    <!-- Brief information of me -->
-    <h3 style="color: white;">My name is Abdulaziz Binyabis, 22 years old. I'm Software Engineer at KFUPM</h3>
-    <h5 style="color: white;">My Hobbies:</h5>
-    <!-- container of the table -->
-    <div>
+    <!-- Brief information about me -->
+    <section class="profile">
+        <h3>My name is Abdulaziz Binyabis, 22 years old. I'm a Software Engineer at KFUPM.</h3>
+    </section>
+    <!-- Container for the table -->
+    <div class="table-container">
         <!-- Starting tag of the table -->
-        <table border="2" style="background-color: rgb(228, 235, 238); text-align: center;">
-            <tr>
-                <!-- Columns of the table -->
-                <th scope="col">Hobby</th>
-                <th scope="col">Rank</th>
-                <th scope="col">When</th>
-                <th scope="col">Why</th>
-                <!-- Ending point of the columns -->
-            </tr>
-            <tr>
-                <td>Swimming</td>
-                <td> #1 </td>
-                <td>Twice a week</td>
-                <td>It <b>stretchs</b> my body and give me <b>enegery</b>.</td>
-            </tr>
-            <tr>
-                <td>Playing</td>
-                <td> #2 </td>
-                <td>Over the weekend</td>
-                <td>I like to spend my free time in playing <b>video games</b>.</td>
-            </tr>
-            <tr>
-                <td>Reading</td>
-                <td> #3 </td>
-                <td>Three times a week</td>
-                <td>Reading books can make me learn new <b>Information</b>.</td>
-            </tr>
-            <!-- Ending tag of the table -->
+        <table class="hobby-table">
+            <caption>
+                <i>Abdulaziz's Hobbies</i>
+            </caption>
+            <thead>
+                <tr>
+                    <!-- Table headers -->
+                    <th scope="col">Hobby</th>
+                    <th scope="col">Rank</th>
+                    <th scope="col">When</th>
+                    <th scope="col">Why</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows -->
+                <tr>
+                    <td>Swimming</td>
+                    <td>#1</td>
+                    <td>Twice a week</td>
+                    <td>It <b>stretches</b> my body and gives me <b>energy</b>.</td>
+                </tr>
+                <tr>
+                    <td>Playing</td>
+                    <td>#2</td>
+                    <td>Over the weekend</td>
+                    <td>I like to spend my free time playing <b>video games</b>.</td>
+                </tr>
+                <tr>
+                    <td>Reading</td>
+                    <td>#3</td>
+                    <td>Three times a week</td>
+                    <td>Reading books helps me learn new <b>information</b>.</td>
+                </tr>
+            </tbody>
         </table>
+        <!-- Ending tag of the table -->
+    </div>
 </body>
 
 </html>
