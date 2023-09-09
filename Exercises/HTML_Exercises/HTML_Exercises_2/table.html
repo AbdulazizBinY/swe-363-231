@@ -1,29 +1,87 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Personal Blog Site">
-        <meta name="keywords" content="Personal, HTML">
-        <meta name="author" content="Abdulaziz Binyabis">
-        <link rel="stylesheet" href="/Exercises/HTML_Exercises/HTML_Exercises_1/style.css">
-        <title>Table Page</title>
-    </head>
-    <body>
-        <table>
-            <tr>
-                <th><del>Hey</del><br>Siri</th>
-                <th><img src="assets2/iphone_1.png" width="200"><br>Contact<br><br>Posters<br></th>
-            </tr>
-            <tr>
-                <td><img src="assets2/airtag.png" alt="airtag" width="50"><br>Find My<br>Item Sharing</td>
-            </tr>
-            <tr>
-                <td><img src="assets2/dog.png" alt="dog" width="60"><br>Pets album in phots</td>
-            </tr>
-            <tr>
-                <td colspan="2"><img src="assets2/calendar.png" width="500"><br>StandBy</td>
-            </tr>
-        </table>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Blog Site">
+    <meta name="keywords" content="Personal, HTML, table">
+    <meta name="author" content="Abdulaziz Binyabis">
+    <link rel="stylesheet" href="/Exercises/HTML_Exercises/HTML_Exercises_1/style.css">
+    <title>Table Page</title>
+
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>
+                <del>Hey</del><br>
+                "Siri"
+            </td>
+            <td rowspan="3">
+                <img src="assets2/iphone_1.png" alt="iphone" width="100"><br>
+                Contact Posters
+            </td>
+            <td>
+                <img src="assets2/maps.png" alt="maps" width="100"><br>
+                Offline maps
+            </td>
+            <td colspan='3'>
+                <img src="assets2/two_hands.png" alt="two_hands" width="250"><br>
+                NameDrop
+            </td>
+            <td>
+                <img src="assets2/swipe.png" alt="swipe" width="100"><br>
+                <img src="assets2/to_reply.png" alt="to_reply" width="100">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="assets2/airtag.png" alt="airtag" width="100"><br>
+                Find My Item Sharing
+            </td>
+            <td rowspan="2" colspan="3">
+                <img src="assets2/iOS.png" alt="iOS" width="250">
+            </td>
+            <td rowspan="2">
+                <img src="assets2/app.png" alt="app" width="100"><br>
+                Journal
+            </td>
+            <td rowspan="2">
+                Leave a FaceTime message<br>
+                <img src="assets2/facetimevideocall.webp" alt="facetimevideocall" width="150">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="assets2/dog.png" alt="dog" width="100"><br>
+                Pets album in Photos
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2">
+                <img src="assets2/calendar.png" alt="calendar" width="200"><br>
+                StandBy
+            </td>
+            <td rowspan="2">
+                <img src="assets2/check.png" alt="checkIn" width="100"><br>
+                CheckIn
+            </td>
+            <td colspan="4">
+                <img src="assets2/sticker_dog.png" alt="sticker_dog" width="50">
+                Live Stickers
+                <img src="assets2/stricker_flower.png" alt="sticker_flower" width="50">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="assets2/phone_bottom.png" alt="phone_bottom" width="100">
+                Live Voicemail
+            </td>
+            <td colspan="3">
+                <ins>Improved</ins> autocorrect
+                <img src="assets2/cursor.png" alt="cursor">
+            </td>
+        </tr>
+    </table>
+</body>
 </html>
