@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Personal Blog Site">
+<meta name="keywords" content="Personal, HTML">
+<meta name="author" content="Abdulaziz Binyabis">
+<link rel="stylesheet" href="style.css">
+<title>Hire Page</title>
+
+</html>
+
+<body>
+    <header>
+      <h1>Hire Me</h1>
+    </header>
+    <h2>Questionnaire</h2>
+  
+    <div>
+      <form action="thankyouPage.html" target="_self" method="post" autocomplete="on">
+        <div>
+          <label for="fname">Your name:</label><br>
+          <input type="text" id="fname" name="fname" placeholder="Abdulaziz Binyabis" autofocus required><br>
+  
+          <label for="email">Your email address:</label><br>
+          <input type="email" id="email" name="email" placeholder="example@gmail.com" required><br>
+        </div>
+  
+        <h2>Project details</h2>
+        <label for="ProjectType">What can I help you with?</label>
+        <input list="ProjectType" placeholder="Please choose one..." id="projectType">
+  
+        <div id="otherServices" style="display: none;">
+          <label for="textarea"></label><br>
+          <textarea name="textarea" placeholder="Please describe what other services you need"></textarea>
+        </div>
+  
+        <datalist id="ProjectType">
+          <option value="Web Design">
+          <option value="Web Development">
+          <option value="Mobile Development">
+          <option value="Other">
+        </datalist>
+  
+        <br>
+  
+        <div>
+          <fieldset>
+            <legend>Is this a new project or a redesign for an existing site?</legend>
+            <div>
+              <input type="radio" id="projectOption1" name="projectOption" value="new" required>
+              <label for="projectOption1">New Project</label>
+        
+              <input type="radio" id="projectOption2" name="projectOption" value="redesign" required>
+              <label for="projectOption2">Redesign Project</label>
+            </div>
+          </fieldset>
+        </div>
+  
+        <div>
+          <label for="timeLine"><b>Timeline.</b> When do you need this completed by?</label><br>
+          <input type="month" id="timeLine" name="timeLine">
+        </div>
+
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+  
+    <script>
+      const projectTypeInput = document.getElementById('projectType');
+      const otherServicesDiv = document.getElementById('otherServices');
+  
+      projectTypeInput.addEventListener('change', () => {
+        if (projectTypeInput.value.toLowerCase() === 'other') {
+          otherServicesDiv.style.display = 'block';
+        } else {
+          otherServicesDiv.style.display = 'none';
+        }
+      });
+    </script>
+  </body>
+</html>
