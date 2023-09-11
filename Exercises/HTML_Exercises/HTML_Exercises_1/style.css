@@ -98,4 +98,6 @@ table, thead {
     caption-side: bottom;
     background-color: #edebeb;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }

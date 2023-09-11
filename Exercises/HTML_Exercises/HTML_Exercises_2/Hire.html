@@ -13,70 +13,80 @@
 <body>
 
   <nav>
-
     <ul>
       <li><a class="active" href="#Hire">Hire Me</a></li>
       <li><a href="/Exercises/HTML_Exercises/HTML_Exercises_1/contactPage.html">Contact</a></li>
       <li><a href="/Exercises/HTML_Exercises/HTML_Exercises_1/detailsPage.html">Details</a></li>
       <li><a href="/Exercises/HTML_Exercises/HTML_Exercises_1/mainPage.html">About</a></li>
+      <li style="float: left;"><a href="/Exercises/HTML_Exercises/HTML_Exercises_1/mainPage.html">Abdulaziz Binyabis</a>
+      </li>
     </ul>
-
   </nav>
 
   <header>
     <h1>Hire Me</h1>
   </header>
-  <div>
+
+  <section>
     <form action="thankyouPage.html" target="_self" method="post" autocomplete="on">
-      <div>
+
+      <main>
         <label for="fname">Your name:</label><br>
         <input type="text" id="fname" name="fname" placeholder="Abdulaziz Binyabis" autofocus required><br>
 
         <label for="email">Your email address:</label><br>
         <input type="email" id="email" name="email" placeholder="example@gmail.com" required><br>
-      </div>
+      </main>
 
-      <h2>Project details</h2>
-      <label for="ProjectType">What can I help you with?</label>
-      <input list="ProjectType" placeholder="Please choose one..." id="projectType">
+      <section>
+        <h2>Project details</h2>
+        <label for="ProjectType">What can I help you with?</label>
+        <input list="ProjectType" placeholder="Please choose one..." id="projectType">
 
-      <div id="otherServices" style="display: none;">
-        <label for="textarea"></label><br>
-        <textarea name="textarea" placeholder="Please describe what other services you need"></textarea>
-      </div>
+        <div id="otherServices" style="display: none;">
+          <label for="textarea"></label><br>
+          <textarea name="textarea" placeholder="Please describe what other services you need"></textarea>
+        </div>
 
-      <datalist id="ProjectType">
-        <option value="Web Design">
-        <option value="Web Development">
-        <option value="Mobile Development">
-        <option value="Other">
-      </datalist>
+        <datalist id="ProjectType">
+          <option value="Web Design">
+          <option value="Web Development">
+          <option value="Mobile Development">
+          <option value="Other">
+        </datalist>
+
+        <div>
+          <fieldset>
+            <legend>Is this a new project or a redesign for an existing site?</legend>
+            <div>
+              <input type="radio" id="projectOption1" name="projectOption" value="new" required>
+              <label for="projectOption1">New Project</label>
+
+              <input type="radio" id="projectOption2" name="projectOption" value="redesign" required>
+              <label for="projectOption2">Redesign Project</label>
+            </div>
+          </fieldset>
+        </div>
+      </section>
 
       <br>
 
-      <div>
-        <fieldset>
-          <legend>Is this a new project or a redesign for an existing site?</legend>
-          <div>
-            <input type="radio" id="projectOption1" name="projectOption" value="new" required>
-            <label for="projectOption1">New Project</label>
 
-            <input type="radio" id="projectOption2" name="projectOption" value="redesign" required>
-            <label for="projectOption2">Redesign Project</label>
-          </div>
-        </fieldset>
-      </div>
-
-      <div>
+      <details>
         <label for="timeLine"><b>Timeline.</b> When do you need this completed by?</label><br>
         <input type="month" id="timeLine" name="timeLine">
-      </div>
+      </details>
 
-      <div>
+      <section>
         <input type="submit" value="Submit">
-      </div>
+      </section>
     </form>
-  </div>
+    
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Abdulaziz Binyabis</p>
+  </footer>
 
   <script>
     const projectTypeInput = document.getElementById('projectType');
@@ -90,6 +100,7 @@
       }
     });
   </script>
+
 </body>
 
 </html>

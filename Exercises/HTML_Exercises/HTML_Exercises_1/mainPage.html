@@ -13,26 +13,105 @@
 
 <body>
     <header>
-        <!-- Navigation Menu -->
-        <nav>
+        <nav> <!-- Navigation Menu -->
             <ul>
                 <li><a href="/Exercises/HTML_Exercises/HTML_Exercises_2/Hire.html">Hire Me</a></li>
                 <li><a href="contactPage.html">Contact</a></li>
-                <li><a href="detailsPage.html">Details</a></li>
-                <li><a class="active" href="#main">About</a></li>
+                <li><a href="#details">Details</a></li>
+                <li><a href="#main">About</a></li>
+                <li style="float: left;"><a class="active" href="#main">Abdulaziz Binyabis</a></li>
             </ul>
         </nav>
-        <img src="assets/Image1.webp" width="1000">
-        <!-- Cover Image and Heading -->
-        <h1>Welcome to My Personal Blog Page!</h1>
+
+        <main> <!-- Cover Image and Heading -->
+            <img src="assets/Image1.webp" width="">
+            <h2 style="color: rgb(91, 77, 60);">Hi, my name is Abdulaziz Binyabis<br>I am Software Engineer.</h2>
+        </main>
     </header>
 
-    <!-- Introduction Section -->
+
+    <br>
+    <br>
+    <br>
+
+    <article id="details">
+        <section>
+            <fieldset>
+                <legend>ICS321: Database project</legend>
+                <p>In this project, we design an website that can manage and record football matches with an orginazied
+                    database
+                    system.</p>
+            </fieldset>
+        </section>
+
+        <br>
+
+        <section>
+            <fieldset>
+                <legend>SWE326: Software testing</legend>
+                <p>In this project, we were asked to test a new system for KFUPM facality and try to find the bugs.</p>
+            </fieldset>
+        </section>
+    </article>
+
+    <br>
+
     <section>
-        <h3>Information about this website:</h3>
-        <p>
-            In this website, <strong>I will talk about myself and showcase my previous projects. </strong>
+        <!-- Starting tag of the table -->
+        <table class="hobby-table" border="1">
+            <caption>
+                <i>Abdulaziz's Hobbies</i>
+            </caption>
+
+            <header>
+                <thead>
+                    <tr>
+                        <!-- Table headers -->
+                        <th scope="col">Hobby</th>
+                        <th scope="col">Rank</th>
+                        <th scope="col">When</th>
+                        <th scope="col">Why</th>
+                    </tr>
+                </thead>
+            </header>
+
+            <section>
+                <tbody>
+                    <!-- New Section -->
+                    <section>
+                        <tr>
+                            <td>Swimming</td>
+                            <td>#1</td>
+                            <td>Twice a week</td>
+                            <td>It <b>stretches</b> my body and gives me <b>energy</b>.</td>
+                        </tr>
+                    </section>
+                    <!-- New Section -->
+                    <section>
+                        <tr>
+                            <td>Playing</td>
+                            <td>#2</td>
+                            <td>Over the weekend</td>
+                            <td>I like to spend my free time playing <b>video games</b>.</td>
+                        </tr>
+                    </section>
+                    <!-- New Section -->
+                    <section>
+                        <tr>
+                            <td>Reading</td>
+                            <td>#3</td>
+                            <td>Three times a week</td>
+                            <td>Reading books helps me learn new <b>information</b>.</td>
+                        </tr>
+                    </section>
+
+                </tbody>
+            </section>
+
+        </table>
+        <!-- Ending tag of the table -->
     </section>
+
 </body>
 
 </html>
