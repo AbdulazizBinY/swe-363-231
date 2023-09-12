@@ -128,3 +128,69 @@ body {
     padding: 10px;
   }
 }
+
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer address {
+  margin-bottom: 20px;
+}
+
+.author {
+  color: aliceblue;
+  font-weight: bold;
+}
+
+#mailto {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+#mailto:hover {
+  color: #ff6600; 
+}
+
+small {
+  display: block;
+}
+
+.heart {
+  color: #ff6600; 
+  font-size: 16px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+#Other {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+#Other:hover {
+  color: #ff6600; 
+}
+
+#top {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+#top:hover {
+  color: #ff6600; 
+}
+
+#footer1 {
+  background-color: #413939;
+}
+
+#footer2 {
+  background-color: #413939;
+}
