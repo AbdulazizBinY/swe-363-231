@@ -1,20 +1,23 @@
+/* Reset some default styles */
 body,
 h1,
-h2,
+h3,
+p,
 label,
 input,
 textarea,
-select {
+a {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
 }
 
-header {
-  background-color: rgb(95, 88, 88);
-  color: #fff;
+#body {
+  background-color: #00010D;
+}
+
+.main {
   text-align: center;
-  padding: 20px 0;
 }
 
 /* Navigation Bar Styles */
@@ -23,12 +26,12 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #363232;
+  background-color: #3B403F;
 }
 
 li {
   float: right;
-  border-right: 1px solid #bbb;
+  border-right: 1px solid #BFB8B4;
 }
 
 li:last-child {
@@ -51,29 +54,43 @@ li .active {
   background-color: rgb(90, 96, 96);
 }
 
+/* Style the header */
 h1 {
-  font-size: 2.5rem;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
 }
 
-section {
-  margin: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Style contact information */
+p {
+  color: #BFB8B4;
+  margin: 10px;
+}
+
+p a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Style the contact form */
+h3 {
+  color: #BF8C6F;
+  text-align: center;
+}
+
+form {
+  text-align: center;
 }
 
 label {
   display: block;
   margin-top: 10px;
-  font-weight: bold;
   color: rgb(95, 88, 88);
 }
 
 input[type="text"],
 input[type="email"],
-input[type="month"],
 textarea {
   width: 100%;
   padding: 10px;
@@ -85,54 +102,25 @@ textarea {
 
 input[type="submit"] {
   background-color: rgb(95, 88, 88);
-  color: #fff;
+  color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
-fieldset {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 10px;
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
+table,
+thead {
+  caption-side: bottom;
+  background-color: #8C8581;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-legend {
-  font-weight: bold;
-  flex: 1;
-}
-
-input[type="radio"] {
-  margin-right: 5px;
-  flex: 0;
-}
-
-h2 {
-  font-size: 1.5rem;
-  margin-top: 20px;
-  color: rgb(95, 88, 88);
-}
-
-body {
-  background-color: rgb(95, 88, 88);
-}
-
-
-@media screen and (max-width: 768px) {
-  div {
-    margin: 10px;
-    padding: 10px;
-  }
-}
-
 
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #00010D;
+  color: #4a3f3f;
   padding: 20px;
   text-align: center;
 }
@@ -153,7 +141,7 @@ footer address {
 }
 
 #mailto:hover {
-  color: #ff6600; 
+  color: #6f6a66;
 }
 
 small {
@@ -161,7 +149,7 @@ small {
 }
 
 .heart {
-  color: #ff6600; 
+  color: #ff6600;
   font-size: 16px;
   vertical-align: middle;
   margin-left: 5px;
@@ -174,7 +162,7 @@ small {
 }
 
 #Other:hover {
-  color: #ff6600; 
+  color: #6f6a66;
 }
 
 #top {
@@ -184,13 +172,14 @@ small {
 }
 
 #top:hover {
-  color: #ff6600; 
+  color: #6f6a66;
 }
 
-#footer1 {
-  background-color: #413939;
+.responsive {
+  width: 100%;
+  height: auto;
 }
 
-#footer2 {
-  background-color: #413939;
+.legend {
+    color: #8C8581;
 }
