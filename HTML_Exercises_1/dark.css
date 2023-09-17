@@ -13,7 +13,7 @@ a {
 }
 
 #body {
-  background-color: #F2E6D8;
+  background-color: #00010D;
 }
 
 .main {
@@ -26,12 +26,12 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #363232;
+  background-color: #3B403F;
 }
 
 li {
   float: right;
-  border-right: 1px solid #bbb;
+  border-right: 1px solid #BFB8B4;
 }
 
 li:last-child {
@@ -63,7 +63,7 @@ h1 {
 
 /* Style contact information */
 p {
-  color: #8C5F45;
+  color: #BFB8B4;
   margin: 10px;
 }
 
@@ -112,15 +112,15 @@ input[type="submit"] {
 table,
 thead {
   caption-side: bottom;
-  background-color: #BFAC95;
+  background-color: #8C8581;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
 
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #00010D;
+  color: #4a3f3f;
   padding: 20px;
   text-align: center;
 }
@@ -141,7 +141,7 @@ footer address {
 }
 
 #mailto:hover {
-  color: #ff6600;
+  color: #6f6a66;
 }
 
 small {
@@ -162,7 +162,7 @@ small {
 }
 
 #Other:hover {
-  color: #ff6600;
+  color: #6f6a66;
 }
 
 #top {
@@ -172,10 +172,14 @@ small {
 }
 
 #top:hover {
-  color: #ff6600;
+  color: #6f6a66;
 }
 
 .responsive {
   width: 100%;
   height: auto;
+}
+
+.legend {
+    color: #8C8581;
 }

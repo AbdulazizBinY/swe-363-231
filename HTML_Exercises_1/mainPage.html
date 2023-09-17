@@ -7,15 +7,15 @@
     <meta name="description" content="Personal Blog Site">
     <meta name="keywords" content="Personal, HTML">
     <meta name="author" content="Abdulaziz Binyabis">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark.css">
     <title>Abdulaziz's Page</title>
 </head>
 
-<body>
+<body id="body">
     <header>
         <nav id="top"> <!-- Navigation Menu -->
             <ul>
-                <li><a href="/Exercises/HTML_Exercises/HTML_Exercises_2/Hire.html">Hire Me</a></li>
+                <li><a href="/HTML_Exercises_2/Hire.html">Hire Me</a></li>
                 <li><a href="contactPage.html">Contact</a></li>
                 <li><a href="#details">Details</a></li>
                 <li><a href="#main">About</a></li>
@@ -24,8 +24,8 @@
         </nav>
 
         <main> <!-- Cover Image and Heading -->
-            <img src="assets/Image1.webp" width="">
-            <h2 style="color: rgb(91, 77, 60);">Hi, my name is Abdulaziz Binyabis<br>I am Software Engineer.</h2>
+            <img class="responsive" src="assets/Laptop.avif">
+            <h2 class="main" style="color:#BFB8B4"><small>Hi, my name is </small><em>Abdulaziz Binyabis</em><br> I am Software Engineer. </h2>
         </main>
     </header>
 
@@ -37,7 +37,7 @@
     <article id="details">
         <section>
             <fieldset>
-                <legend>ICS321: Database project</legend>
+                <legend class="legend">ICS321: Database project</legend>
                 <p>In this project, we design an website that can manage and record football matches with an orginazied
                     database
                     system.</p>
@@ -48,7 +48,7 @@
 
         <section>
             <fieldset>
-                <legend>SWE326: Software testing</legend>
+                <legend class="legend">SWE326: Software testing</legend>
                 <p>In this project, we were asked to test a new system for KFUPM facality and try to find the bugs.</p>
             </fieldset>
         </section>
