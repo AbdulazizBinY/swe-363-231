@@ -25,7 +25,7 @@
 
         <main> <!-- Cover Image and Heading -->
             <img class="responsive" src="assets/Laptop.avif">
-            <h2 class="main" style="color:#BFB8B4"><small>Hi, my name is </small><em>Abdulaziz Binyabis</em><br> I am Software Engineer. </h2>
+            <h2 class="main" style="color:#BFB8B4"><small>Hi, my name is </small><em id="the-most-important">Abdulaziz Binyabis</em><br> I am Software Engineer. </h2>
         </main>
     </header>
 
@@ -37,7 +37,7 @@
     <article id="details">
         <section>
             <fieldset>
-                <legend class="legend">ICS321: Database project</legend>
+                <legend class="legend">ICS321: <em>Database project</em></legend>
                 <p>In this project, we design an website that can manage and record football matches with an orginazied
                     database
                     system.</p>
@@ -48,7 +48,7 @@
 
         <section>
             <fieldset>
-                <legend class="legend">SWE326: Software testing</legend>
+                <legend class="legend">SWE326: <em>Software testing</em></legend>
                 <p>In this project, we were asked to test a new system for KFUPM facality and try to find the bugs.</p>
             </fieldset>
         </section>
@@ -56,10 +56,10 @@
 
     <br>
 
-    <section>
+    <section style="overflow-x: auto;">
         <!-- Starting tag of the table -->
-        <table class="hobby-table" border="1">
-            <caption>
+        <table class="hobby-table">
+            <caption id="caption-color">
                 <i>Abdulaziz's Hobbies</i>
             </caption>
 
@@ -67,10 +67,10 @@
                 <thead>
                     <tr>
                         <!-- Table headers -->
-                        <th scope="col">Hobby</th>
-                        <th scope="col">Rank</th>
-                        <th scope="col">When</th>
-                        <th scope="col">Why</th>
+                        <th class="top" scope="col">Hobby</th>
+                        <th class="top" scope="col">Rank</th>
+                        <th class="top" scope="col">When</th>
+                        <th class="top" scope="col">Why</th>
                     </tr>
                 </thead>
             </header>
@@ -83,7 +83,7 @@
                             <td>Swimming</td>
                             <td>#1</td>
                             <td>Twice a week</td>
-                            <td>It <b>stretches</b> my body and gives me <b>energy</b>.</td>
+                            <td>It <i>stretches</i> my body and gives me <i>energy</i>.</td>
                         </tr>
                     </section>
                     <!-- New Section -->
@@ -92,7 +92,7 @@
                             <td>Playing</td>
                             <td>#2</td>
                             <td>Over the weekend</td>
-                            <td>I like to spend my free time playing <b>video games</b>.</td>
+                            <td>I like to spend my free time playing <i>video games</i>.</td>
                         </tr>
                     </section>
                     <!-- New Section -->
@@ -101,7 +101,7 @@
                             <td>Reading</td>
                             <td>#3</td>
                             <td>Three times a week</td>
-                            <td>Reading books helps me learn new <b>information</b>.</td>
+                            <td>Reading books helps me learn new <i>information</i>.</td>
                         </tr>
                     </section>
 
