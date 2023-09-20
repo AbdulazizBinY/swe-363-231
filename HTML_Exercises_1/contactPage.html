@@ -20,7 +20,7 @@
             <li style="float: left;"><a href="mainPage.html">Abdulaziz Binyabis</a></li>
         </ul>
     </nav>
-    <h1 style="color: rgb(255, 255, 255);">Contact Information</h1>
+    <h1 id="head1" style="color: rgb(255, 255, 255);">Contact Information</h1>
     <!-- P tage that have my information contact -->
     <p><strong>Email:</strong> <a href="mailto:Abdulazizbinyabis@gmail.com">Abdulazizbinyabis@gmail.com</a></p>
     <p><strong>Phone:</strong> <a href="tel:+966555029876">+966555029876</a></p>
@@ -29,14 +29,14 @@
     <!-- Form that allows users to send my an email **THIS IS NOT FUNCTIONAL** -->
     <h3 style="color: rgb(123, 108, 108);">Contact form:</h3>
     <form action="conformationPage.html" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br>
+        <label id="name" for="name">Name:</label>
+        <input class="input" type="text" id="name" name="name" required><br>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
+        <input class="input" type="email" id="email" name="email" required><br>
 
         <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="3" required></textarea><br>
+        <textarea class="input" id="message" name="message" rows="3" required></textarea><br>
 
         <input type="submit" value="Submit">
     </form>

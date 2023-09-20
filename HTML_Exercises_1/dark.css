@@ -1,6 +1,7 @@
 /* Reset some default styles */
 body,
 h1,
+h2,
 h3,
 p,
 label,
@@ -10,6 +11,10 @@ a {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  text-transform: capitalize;
 }
 
 #body {
@@ -34,6 +39,9 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: #3B403F;
 }
 
@@ -130,6 +138,10 @@ table {
   margin-right: auto;
 }
 
+tr:nth-child(even) {
+  background-color: #3128258e;
+}
+
 .top {
   text-transform: uppercase;
   background-color: #EB5406;
@@ -198,6 +210,7 @@ small {
 
 #top:hover {
   color: #6f6a66;
+  cursor: pointer;
 }
 
 .responsive {
@@ -207,4 +220,25 @@ small {
 
 .legend {
   color: #8C8581;
+}
+
+::selection {
+  background-color: #a05c5c;
+}
+
+.input {
+  height: 20px;
+}
+
+#name {
+  width: auto;
+}
+
+#email {
+  width: auto;
+}
+
+#head1 {
+  margin: 40px;
+  padding: 30px;
 }
