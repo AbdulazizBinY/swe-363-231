@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Personal Blog site.">
+<meta name="keywords" content="Personal, HTML">
+<meta name="author" content="عبد العزيز بن يابس">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dark-ar.css">
+<title>صفحة التوظيف</title>
+
+</html>
+
+<body>
+
+    <nav id="top">
+        <ul>
+            <li><a href="Hire.html">English</a></li>
+            <li><a class="active" href="#Hire">وضفني</a></li>
+            <li><a href="/Exercises/contactPage-ar.html">معلومات التواصل</a></li>
+            <li><a href="/Exercises/mainPage-ar.html">تفاصيل</a></li>
+            <li><a href="/Exercises/mainPage-ar.html">نبذة</a></li>
+            <li style="float: left;"><a href="/Exercises/mainPage-ar.html">عبد العزيز بن يابس</a>
+            </li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>وضفني</h1>
+    </header>
+
+    <section>
+        <form action="thankyouPage.html" target="_self" method="post" autocomplete="on" style="color: #00010D;">
+
+            <main>
+                <label for="fname">اسمك:</label><br>
+                <input type="text" id="fname" name="fname" placeholder="عبد العزيز بن يابس" autofocus required><br>
+
+                <label for="email">عنوان بريدك الإلكتروني:</label><br>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" required><br>
+            </main>
+
+            <section>
+                <h2>تفاصيل المشروع</h2>
+                <label for="ProjectType">كيف يمكنني مساعدتك؟</label>
+                <input list="ProjectType" placeholder="الرجاء اختيار واحد..." id="projectType">
+
+                <div id="otherServices" style="display: none;">
+                    <label for="textarea"></label><br>
+                    <textarea name="textarea" placeholder="يرجى شرح الخدمات الأخرى التي تحتاجها"></textarea>
+                </div>
+
+                <datalist id="ProjectType">
+                    <option value="تصميم مواقع ويب">
+                    <option value="تطوير مواقع ويب">
+                    <option value="تطوير تطبيقات الجوال">
+                    <option value="أخرى">
+                </datalist>
+
+                <div>
+                    <fieldset>
+                        <legend>هل هذا مشروع جديد أم تعديل لموقع موجود؟</legend>
+                        <div>
+                            <input type="radio" id="projectOption1" name="projectOption" value="جديد" required>
+                            <label for="projectOption1">مشروع جديد</label>
+
+                            <input type="radio" id="projectOption2" name="projectOption" value="تعديل" required>
+                            <label for="projectOption2">تعديل مشروع موجود</label>
+                        </div>
+                    </fieldset>
+                </div>
+            </section>
+
+            <br>
+
+            <details style="color: aliceblue;" >
+                <summary>إضافه بعض التفاصيل</summary>
+                <label for="timeLine"><b>الجدول الزمني. متى تريدني اكمل العمل هذا؟</b></label><br>
+                <input type="month" id="timeLine" name="timeLine">
+            </details>
+
+            <section>
+                <input type="submit" value="إرسال">
+            </section>
+        </form>
+
+    </section>
+
+    <footer>
+
+        <address>
+            <p style="color: aliceblue;">LinkedIn: <a id="mailto"
+                    href="https://www.linkedin.com/in/abdulaziz-binyabis-458117224/">عبد العزيز</a></p>
+            <section id="footer1">
+                <small>
+                    <a id="Other" href="/Exercises/HTML_Exercises/HTML_Exercises_1/contactPage.html">معلومات الاتصال
+                        الأخرى.</a>
+                </small>
+                <p> <a id="top" href="#top">العودة إلى الروابط</a></p>
+            </section>
+        </address>
+
+        <section id="footer2">
+            <small>
+                &copy; صنع بواسطة &lsaquo;/&rsaquo; عبد العزيز. 2023
+            </small>
+        </section>
+
+    </footer>
+    <script>
+        const projectTypeInput = document.getElementById('projectType');
+        const otherServicesDiv = document.getElementById('otherServices');
+
+        projectTypeInput.addEventListener('change', () => {
+            if (projectTypeInput.value.toLowerCase() === 'أخرى') {
+                otherServicesDiv.style.display = 'block';
+            } else {
+                otherServicesDiv.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+
+</html>
