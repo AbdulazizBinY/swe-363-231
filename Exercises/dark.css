@@ -139,7 +139,7 @@ table {
 }
 
 tr:nth-child(even) {
-  background-color: #3128258e;
+  background-color: #80675e8e;
 }
 
 .top {
@@ -156,6 +156,8 @@ tr:hover {
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
   background-color: #00010D;
   color: #4a3f3f;
   padding: 20px;
@@ -178,7 +180,7 @@ footer address {
 }
 
 #mailto:hover {
-  color: #6f6a66;
+  color: #ff8c44;
 }
 
 small {
@@ -199,7 +201,7 @@ small {
 }
 
 #Other:hover {
-  color: #6f6a66;
+  color: #ff8c44;
 }
 
 #top {
@@ -209,7 +211,7 @@ small {
 }
 
 #top:hover {
-  color: #6f6a66;
+  color: #ff8c44;
   cursor: pointer;
 }
 
