@@ -13,7 +13,9 @@ a {
   font-family: Arial, sans-serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   text-transform: capitalize;
 }
 
@@ -60,6 +62,7 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  transition: background-color 0.5s ease;
 }
 
 li a:hover {
@@ -123,6 +126,7 @@ input[type="submit"] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.5s ease;
 }
 
 table {
@@ -243,4 +247,58 @@ small {
 #head1 {
   margin: 40px;
   padding: 30px;
+}
+
+li:not(#hamburger) {
+  display: none;
+}
+
+#hamburger {
+  float: left;
+}
+
+#hamburger i {
+  padding: 14px 16px;
+  color: white;
+  cursor: pointer;
+}
+
+ul>li:not(#hamburger) {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+#hamburger:hover+li,
+#hamburger:hover+li+li,
+#hamburger:hover+li+li+li,
+#hamburger:hover+li+li+li+li,
+#hamburger:hover+li+li+li+li+li,
+#hamburger:hover+li+li+li+li+li+li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#hamburger:hover+li {
+  transition-delay: 0.1s;
+}
+
+#hamburger:hover+li+li {
+  transition-delay: 0.2s;
+}
+
+#hamburger:hover+li+li+li {
+  transition-delay: 0.3s;
+}
+
+#hamburger:hover+li+li+li+li {
+  transition-delay: 0.4s;
+}
+
+#hamburger:hover+li+li+li+li+li {
+  transition-delay: 0.5s;
+}
+
+#hamburger:hover+li+li+li+li+li+li {
+  transition-delay: 0.6s;
 }

@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Personal Blog Site">
@@ -12,9 +13,11 @@
 </head>
 
 <body id="body">
+    <div class="loader"></div>
     <header>
         <nav id="top"> <!-- Navigation Menu -->
             <ul>
+                <li id="hamburger"><i class="fas fa-bars"></i></li>
                 <li><a href="mainPage-ar.html">العربية</a></li>
                 <li><a href="/Other_Exersices/Hire.html">Hire Me</a></li>
                 <li><a href="contactPage.html">Contact</a></li>
@@ -26,7 +29,8 @@
 
         <main> <!-- Cover Image and Heading -->
             <img class="responsive" src="assets/Laptop.avif">
-            <h2 class="main" style="color:#BFB8B4"><small>Hi, my name is </small><em id="the-most-important">Abdulaziz Binyabis</em><br> I am Software Engineer. </h2>
+            <h2 class="main" style="color:#BFB8B4"><small>Hi, my name is </small><em id="the-most-important">Abdulaziz
+                    Binyabis</em><br> I am Software Engineer. </h2>
         </main>
     </header>
 
@@ -133,7 +137,27 @@
         </section>
 
     </footer>
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function () {
+            var navItems = document.querySelectorAll('li:not(#hamburger)');
+            navItems.forEach(function (item) {
+                if (item.style.display === "none" || item.style.display === "") {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        });
+    </script>
 
+    <script>
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                document.querySelector('.loader').style.display = 'none';
+            }, 2000);
+        });
+
+    </script>
 </body>
 
 </html>
