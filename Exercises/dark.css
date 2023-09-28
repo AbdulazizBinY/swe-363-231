@@ -302,3 +302,29 @@ ul>li:not(#hamburger) {
 #hamburger:hover+li+li+li+li+li+li {
   transition-delay: 0.6s;
 }
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  border-top: 8px dotted #3e5667;
+  border-right: 8px dotted transparent;
+  border-bottom: 8px dotted transparent;
+  border-left: 8px dotted transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
