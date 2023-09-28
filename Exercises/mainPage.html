@@ -2,6 +2,10 @@
 <html lang="en">
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500&family=Onest:wght@300&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,150 +18,143 @@
 
 <body id="body">
     <div class="loader"></div>
-    <header>
-        <nav id="top"> <!-- Navigation Menu -->
-            <ul>
-                <li id="hamburger"><i class="fas fa-bars"></i></li>
-                <li><a href="mainPage-ar.html">العربية</a></li>
-                <li><a href="/Other_Exersices/Hire.html">Hire Me</a></li>
-                <li><a href="contactPage.html">Contact</a></li>
-                <li><a href="#details">Details</a></li>
-                <li><a href="#main">About</a></li>
-                <li style="float: left;"><a class="active" href="#main">Abdulaziz Binyabis</a></li>
-            </ul>
-        </nav>
+    <div class="site-content" style="display: none;">
+        <header>
+            <nav id="top"> <!-- Navigation Menu -->
+                <ul>
+                    <li id="hamburger"><i class="fas fa-bars"></i></li>
+                    <li><a href="mainPage-ar.html">العربية</a></li>
+                    <li><a href="/Other_Exersices/Hire.html">Hire Me</a></li>
+                    <li><a href="contactPage.html">Contact</a></li>
+                    <li><a href="#details">Details</a></li>
+                    <li><a href="#main">About</a></li>
+                    <li style="float: left;"><a class="active" href="#main">Abdulaziz Binyabis</a></li>
+                </ul>
+            </nav>
 
-        <main> <!-- Cover Image and Heading -->
-            <img class="responsive" src="assets/Laptop.avif">
-            <h2 class="main" style="color:#BFB8B4"><small>Hi, my name is </small><em id="the-most-important">Abdulaziz
-                    Binyabis</em><br> I am Software Engineer. </h2>
-        </main>
-    </header>
+            <main> <!-- Cover Image and Heading -->
+                <img class="responsive" src="assets/Laptop.avif">
+                <h2 class="main" style="color:#BFB8B4"><small>Hi, my name is </small><em
+                        id="the-most-important">Abdulaziz
+                        Binyabis</em><br> I am Software Engineer. </h2>
+            </main>
+        </header>
 
 
-    <br>
-    <br>
-    <br>
+        <br>
+        <br>
+        <br>
 
-    <article id="details">
-        <section>
-            <fieldset>
-                <legend class="legend">ICS321: <em>Database project</em></legend>
-                <p>In this project, we design an website that can manage and record football matches with an orginazied
-                    database
-                    system.</p>
-            </fieldset>
-        </section>
+        <article id="details">
+            <section>
+                <fieldset>
+                    <legend class="legend">ICS321: <em>Database project</em></legend>
+                    <p>In this project, we design an website that can manage and record football matches with an
+                        orginazied
+                        database
+                        system.</p>
+                </fieldset>
+            </section>
+
+            <br>
+
+            <section>
+                <fieldset>
+                    <legend class="legend">SWE326: <em>Software testing</em></legend>
+                    <p>In this project, we were asked to test a new system for KFUPM facality and try to find the bugs.
+                    </p>
+                </fieldset>
+            </section>
+        </article>
 
         <br>
 
-        <section>
-            <fieldset>
-                <legend class="legend">SWE326: <em>Software testing</em></legend>
-                <p>In this project, we were asked to test a new system for KFUPM facality and try to find the bugs.</p>
-            </fieldset>
+        <section style="overflow-x: auto;">
+            <!-- Starting tag of the table -->
+            <table class="hobby-table">
+                <caption id="caption-color">
+                    <i>Abdulaziz's Hobbies</i>
+                </caption>
+
+                <header>
+                    <thead>
+                        <tr>
+                            <!-- Table headers -->
+                            <th class="top" scope="col">Hobby</th>
+                            <th class="top" scope="col">Rank</th>
+                            <th class="top" scope="col">When</th>
+                            <th class="top" scope="col">Why</th>
+                        </tr>
+                    </thead>
+                </header>
+
+                <section>
+                    <tbody>
+                        <!-- New Section -->
+                        <section>
+                            <tr>
+                                <td>Swimming</td>
+                                <td>#1</td>
+                                <td>Twice a week</td>
+                                <td>It <i>stretches</i> my body and gives me <i>energy</i>.</td>
+                            </tr>
+                        </section>
+                        <!-- New Section -->
+                        <section>
+                            <tr>
+                                <td>Playing</td>
+                                <td>#2</td>
+                                <td>Over the weekend</td>
+                                <td>I like to spend my free time playing <i>video games</i>.</td>
+                            </tr>
+                        </section>
+                        <!-- New Section -->
+                        <section>
+                            <tr>
+                                <td>Reading</td>
+                                <td>#3</td>
+                                <td>Three times a week</td>
+                                <td>Reading books helps me learn new <i>information</i>.</td>
+                            </tr>
+                        </section>
+
+                    </tbody>
+                </section>
+
+            </table>
+            <!-- Ending tag of the table -->
         </section>
-    </article>
 
-    <br>
+        <footer>
 
-    <section style="overflow-x: auto;">
-        <!-- Starting tag of the table -->
-        <table class="hobby-table">
-            <caption id="caption-color">
-                <i>Abdulaziz's Hobbies</i>
-            </caption>
+            <address>
+                <p style="color: aliceblue;">LinkedIn: <a id="mailto"
+                        href="https://www.linkedin.com/in/abdulaziz-binyabis-458117224/">Abdulaziz</a></p>
+                <section>
+                    <small>
+                        <a id="Other" href="conformationPage.html">Other contact information.</a>
+                    </small>
+                    <p> <a id="top" href="#top">Back to links</a></p>
+                </section>
+            </address>
 
-            <header>
-                <thead>
-                    <tr>
-                        <!-- Table headers -->
-                        <th class="top" scope="col">Hobby</th>
-                        <th class="top" scope="col">Rank</th>
-                        <th class="top" scope="col">When</th>
-                        <th class="top" scope="col">Why</th>
-                    </tr>
-                </thead>
-            </header>
-
-            <section>
-                <tbody>
-                    <!-- New Section -->
-                    <section>
-                        <tr>
-                            <td>Swimming</td>
-                            <td>#1</td>
-                            <td>Twice a week</td>
-                            <td>It <i>stretches</i> my body and gives me <i>energy</i>.</td>
-                        </tr>
-                    </section>
-                    <!-- New Section -->
-                    <section>
-                        <tr>
-                            <td>Playing</td>
-                            <td>#2</td>
-                            <td>Over the weekend</td>
-                            <td>I like to spend my free time playing <i>video games</i>.</td>
-                        </tr>
-                    </section>
-                    <!-- New Section -->
-                    <section>
-                        <tr>
-                            <td>Reading</td>
-                            <td>#3</td>
-                            <td>Three times a week</td>
-                            <td>Reading books helps me learn new <i>information</i>.</td>
-                        </tr>
-                    </section>
-
-                </tbody>
-            </section>
-
-        </table>
-        <!-- Ending tag of the table -->
-    </section>
-
-    <footer>
-
-        <address>
-            <p style="color: aliceblue;">LinkedIn: <a id="mailto"
-                    href="https://www.linkedin.com/in/abdulaziz-binyabis-458117224/">Abdulaziz</a></p>
-            <section>
+            <section id="footer1">
                 <small>
-                    <a id="Other" href="conformationPage.html">Other contact information.</a>
+                    &copy; Made with &lsaquo;/&rsaquo; by Abdulaziz. 2023
                 </small>
-                <p> <a id="top" href="#top">Back to links</a></p>
             </section>
-        </address>
 
-        <section>
-            <small>
-                &copy; Made with &lsaquo;/&rsaquo; by Abdulaziz. 2023
-            </small>
-        </section>
+        </footer>
 
-    </footer>
-    <script>
-        document.getElementById('hamburger').addEventListener('click', function () {
-            var navItems = document.querySelectorAll('li:not(#hamburger)');
-            navItems.forEach(function (item) {
-                if (item.style.display === "none" || item.style.display === "") {
-                    item.style.display = "block";
-                } else {
-                    item.style.display = "none";
-                }
+        <script>
+            window.addEventListener('load', function () {
+                setTimeout(function () {
+                    document.querySelector('.loader').style.display = 'none';
+                    document.querySelector('.site-content').style.display = 'block';
+                }, 2000);  // 2 seconds
             });
-        });
-    </script>
+        </script>
 
-    <script>
-        window.addEventListener('load', function () {
-            setTimeout(function () {
-                document.querySelector('.loader').style.display = 'none';
-            }, 2000);
-        });
-
-    </script>
 </body>
 
 </html>

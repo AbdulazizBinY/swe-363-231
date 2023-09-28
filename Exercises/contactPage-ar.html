@@ -2,6 +2,7 @@
 <html lang="ar" dir="rtl">
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Personal Blog site.">
@@ -14,8 +15,11 @@
 </head>
 
 <body id="body">
+    <div class="loader"></div>
+    <div class="site-content" style="display: none;">
     <nav>
         <ul>
+            <li id="hamburger"><i class="fas fa-bars"></i></li>
             <li><a href="contactPage.html">English</a></li>
             <li><a href="/Other_Exersices/Hire-ar.html">وضفني</a></li>
             <li><a class="active" href="contactPage-ar.html" style="color: white;">معلومات التواصل</a></li>
@@ -26,9 +30,11 @@
     </nav>
     <h1 id="head1" style="color: rgb(255, 255, 255);">معلومات الاتصال</h1>
     <!-- الفقرة التي تحتوي على معلومات الاتصال الخاصة بي -->
-    <p><strong>البريد الإلكتروني:</strong> <a href="mailto:Abdulazizbinyabis@gmail.com">Abdulazizbinyabis@gmail.com</a></p>
+    <p><strong>البريد الإلكتروني:</strong> <a href="mailto:Abdulazizbinyabis@gmail.com">Abdulazizbinyabis@gmail.com</a>
+    </p>
     <p><strong>الهاتف:</strong> <a href="tel:+966555029876">+966555029876</a></p>
-    <p><strong>لينكدإن:</strong> <a href="https://www.linkedin.com/in/abdulaziz-binyabis-458117224/">@Abdulazizbinyabis</a></p>
+    <p><strong>لينكدإن:</strong> <a
+            href="https://www.linkedin.com/in/abdulaziz-binyabis-458117224/">@Abdulazizbinyabis</a></p>
     <!-- النموذج الذي يسمح للمستخدمين بإرسال بريد إلكتروني لي **هذا غير فعال** -->
     <h3 style="color: rgb(123, 108, 108);">نموذج الاتصال:</h3>
     <form action="conformationPage.html" method="post">
@@ -50,14 +56,22 @@
             <p> <a id="top" href="mainPage.html">العودة إلى الروابط</a></p>
         </address>
 
-        <section>
+        <section id = footer1>
             <small>
                 &copy; صنع بواسطة &lsaquo;/&rsaquo; عبد العزيز. 2023
             </small>
         </section>
 
     </footer>
+    <script>
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                document.querySelector('.loader').style.display = 'none';
+                document.querySelector('.site-content').style.display = 'block';
+            }, 2000);  // 2 seconds
+        });
 
+    </script>
 </body>
 
 </html>

@@ -2,6 +2,7 @@
 <html lang="ar" dir="rtl">
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Personal Blog site.">
@@ -15,9 +16,12 @@
 </head>
 
 <body id="body">
+    <div class="loader"></div>
+    <div class="site-content" style="display: none;">
     <header>
         <nav id="top"> <!-- قائمة التنقل -->
             <ul>
+                <li id="hamburger"><i class="fas fa-bars"></i></li>
                 <li><a href="mainPage.html">English</a></li>
                 <li><a href="/Other_Exersices/Hire-ar.html">وضفني</a></li>
                 <li><a href="contactPage-ar.html">معلومات التواصل</a></li>
@@ -129,14 +133,22 @@
             </section>
         </address>
 
-        <section>
+        <section id="footer1">
             <small>
                 &copy; صنع بواسطة &lsaquo;/&rsaquo; عبد العزيز. 2023
             </small>
         </section>
 
     </footer>
-
+    
+    <script>
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                document.querySelector('.loader').style.display = 'none';
+                document.querySelector('.site-content').style.display = 'block';
+            }, 2000);  // 2 seconds
+        });
+    </script>
 </body>
 
 </html>

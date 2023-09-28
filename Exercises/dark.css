@@ -10,7 +10,8 @@ textarea,
 a {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Markazi Text', serif;
+  font-family: 'Onest', sans-serif;
 }
 
 h1,
@@ -172,6 +173,16 @@ footer address {
   margin-bottom: 20px;
 }
 
+#footer1 {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #797070;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #413939;
+  color: white;
+}
+
 .author {
   color: aliceblue;
   font-weight: bold;
@@ -249,10 +260,6 @@ small {
   padding: 30px;
 }
 
-li:not(#hamburger) {
-  display: none;
-}
-
 #hamburger {
   float: left;
 }
@@ -265,10 +272,16 @@ li:not(#hamburger) {
 
 ul>li:not(#hamburger) {
   opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.3s, transform 0.3s;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
 }
 
+ul:hover>li:not(#hamburger) {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*
 #hamburger:hover+li,
 #hamburger:hover+li+li,
 #hamburger:hover+li+li+li,
@@ -276,9 +289,52 @@ ul>li:not(#hamburger) {
 #hamburger:hover+li+li+li+li+li,
 #hamburger:hover+li+li+li+li+li+li {
   opacity: 1;
-  transform: translateY(0);
+  visibility: visible;
+}
+*/
+#hamburger:hover~li:nth-child(2),
+ul:hover>li:nth-child(2) {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.1s;
 }
 
+#hamburger:hover~li:nth-child(3),
+ul:hover>li:nth-child(3) {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.2s;
+}
+
+#hamburger:hover~li:nth-child(4),
+ul:hover>li:nth-child(4) {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.3s;
+}
+
+#hamburger:hover~li:nth-child(5),
+ul:hover>li:nth-child(5) {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.4s;
+}
+
+#hamburger:hover~li:nth-child(6),
+ul:hover>li:nth-child(6) {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+
+#hamburger:hover~li:nth-child(7),
+ul:hover>li:nth-child(7) {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.6s;
+}
+
+/*
 #hamburger:hover+li {
   transition-delay: 0.1s;
 }
@@ -302,6 +358,7 @@ ul>li:not(#hamburger) {
 #hamburger:hover+li+li+li+li+li+li {
   transition-delay: 0.6s;
 }
+*/
 
 .loader {
   width: 50px;

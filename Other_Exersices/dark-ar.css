@@ -11,8 +11,8 @@ select {
 }
 
 header {
-  background-color: rgb(47, 45, 45);
-  color: #00010D;
+  background-color: #00010D;
+  color: #ffffff;
   text-align: center;
   padding: 20px 0;
 }
@@ -23,7 +23,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #00010D;
+  background-color: #3B403F;
 }
 
 li {
@@ -133,7 +133,7 @@ body {
 
 
 footer {
-  background-color: #333;
+  background-color: #00010D;
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -190,9 +190,136 @@ small {
 }
 
 #footer1 {
-  background-color: #413939;
+  background-color: #00010D;
+  border-color: #00010D;
 }
 
 #footer2 {
   background-color: #413939;
+}
+
+#hamburger {
+  float: left;
+}
+
+#hamburger i {
+  padding: 14px 16px;
+  color: white;
+  cursor: pointer;
+}
+
+ul>li:not(#hamburger) {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+ul:hover>li:not(#hamburger) {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*
+#hamburger:hover+li,
+#hamburger:hover+li+li,
+#hamburger:hover+li+li+li,
+#hamburger:hover+li+li+li+li,
+#hamburger:hover+li+li+li+li+li,
+#hamburger:hover+li+li+li+li+li+li {
+  opacity: 1;
+  visibility: visible;
+}
+*/
+#hamburger:hover~li:nth-child(2),
+ul:hover>li:nth-child(2) {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.1s;
+}
+
+#hamburger:hover~li:nth-child(3),
+ul:hover>li:nth-child(3) {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.2s;
+}
+
+#hamburger:hover~li:nth-child(4),
+ul:hover>li:nth-child(4) {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.3s;
+}
+
+#hamburger:hover~li:nth-child(5),
+ul:hover>li:nth-child(5) {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.4s;
+}
+
+#hamburger:hover~li:nth-child(6),
+ul:hover>li:nth-child(6) {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+
+#hamburger:hover~li:nth-child(7),
+ul:hover>li:nth-child(7) {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.6s;
+}
+
+/*
+#hamburger:hover+li {
+  transition-delay: 0.1s;
+}
+
+#hamburger:hover+li+li {
+  transition-delay: 0.2s;
+}
+
+#hamburger:hover+li+li+li {
+  transition-delay: 0.3s;
+}
+
+#hamburger:hover+li+li+li+li {
+  transition-delay: 0.4s;
+}
+
+#hamburger:hover+li+li+li+li+li {
+  transition-delay: 0.5s;
+}
+
+#hamburger:hover+li+li+li+li+li+li {
+  transition-delay: 0.6s;
+}
+*/
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  border-top: 8px dotted #3e5667;
+  border-right: 8px dotted transparent;
+  border-bottom: 8px dotted transparent;
+  border-left: 8px dotted transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }

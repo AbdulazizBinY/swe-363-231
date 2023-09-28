@@ -2,6 +2,11 @@
 <html>
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500&family=Onest:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Personal Blog site.">
@@ -12,8 +17,11 @@
 </head>
 
 <body id="body">
+    <div class="loader"></div>
+    <div class="site-content" style="display: none;">
     <nav>
         <ul>
+            <li id="hamburger"><i class="fas fa-bars"></i></li>
             <li><a href="contactPage-ar.html">العربية</a></li>
             <li><a href="/Other_Exersices/Hire.html">Hire Me</a></li>
             <li><a class="active" href="contactPage.html" style="color: white;">Contact</a></li>
@@ -50,14 +58,23 @@
             </section>
         </address>
 
-        <section>
+        <section id="footer1">
             <small>
                 &copy; Made with &lsaquo;/&rsaquo; by Abdulaziz. 2023
             </small>
         </section>
 
     </footer>
+    
+    <script>
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                document.querySelector('.loader').style.display = 'none';
+                document.querySelector('.site-content').style.display = 'block';
+            }, 2000);  // 2 seconds
+        });
 
+    </script>
 </body>
 
 </html>
