@@ -1,0 +1,6 @@
+@media only screen and (min-width: 769px) {
+    /* Hide the checkbox */
+    #menuToggle {
+        display: none;
+    }
+}

@@ -340,6 +340,7 @@ ul:hover>li:nth-child(8) {
   visibility: visible;
   transition-delay: 0.7s;
 }
+
 /*
 #hamburger:hover+li {
   transition-delay: 0.1s;

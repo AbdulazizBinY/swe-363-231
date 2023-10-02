@@ -1,20 +1,25 @@
-/* Media Query for Mobile Devices */
 @media only screen and (max-width: 768px) {
 
+    /* ... Your existing styles ... */
     /* Adjust font size for better readability on mobile */
     body {
         font-size: 18px;
     }
 
-    /* Navigation: By default, hide all navigation items except for the hamburger icon and theme changer */
-    ul li:not(#hamburger):not(#changeTheme) {
+    /* Adjust hamburger icon for smaller screens */
+    #hamburger i {
+        padding: 14px;
+    }
+
+    /* By default, hide the checkbox */
+    #menuToggle {
         display: none;
     }
 
-    /* Show navigation items when hamburger is clicked */
-    #hamburger:active + li,
-    #hamburger:focus + li {
+    /* Style the label to be your clickable hamburger icon */
+    #hamburger label {
         display: block;
+        cursor: pointer;
     }
 
     /* Adjust navigation for smaller screens */
@@ -30,9 +35,21 @@
         text-align: left;
     }
 
-    /* Adjust hamburger icon for smaller screens */
-    #hamburger i {
-        padding: 14px;
+
+    /* By default on mobile, hide all navigation items except for the hamburger icon and theme changer */
+    ul li:not(#changeTheme):not(#hamburger) {
+        display: none;
+    }
+
+    /* Show navigation items when checkbox is checked */
+    #menuToggle:checked~#changeTheme,
+    #menuToggle:checked~#changeTheme+li,
+    #menuToggle:checked~#changeTheme+li+li,
+    #menuToggle:checked~#changeTheme+li+li+li,
+    #menuToggle:checked~#changeTheme+li+li+li+li,
+    #menuToggle:checked~#changeTheme+li+li+li+li+li,
+    #menuToggle:checked~#changeTheme+li+li+li+li+li+li {
+        display: block;
     }
 
     /* Adjust the header to ensure it fits the mobile screen and is centered */
