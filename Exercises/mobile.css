@@ -1,0 +1,54 @@
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 768px) {
+
+    /* Adjust font size for better readability on mobile */
+    body {
+        font-size: 18px;
+    }
+
+    /* Navigation: By default, hide all navigation items except for the hamburger icon and theme changer */
+    ul li:not(#hamburger):not(#changeTheme) {
+        display: none;
+    }
+
+    /* Show navigation items when hamburger is clicked */
+    #hamburger:active + li,
+    #hamburger:focus + li {
+        display: block;
+    }
+
+    /* Adjust navigation for smaller screens */
+    ul {
+        height: auto;
+        display: block;
+    }
+
+    /* Adjust navbar items */
+    ul li {
+        float: none;
+        width: 100%;
+        text-align: left;
+    }
+
+    /* Adjust hamburger icon for smaller screens */
+    #hamburger i {
+        padding: 14px;
+    }
+
+    /* Adjust the header to ensure it fits the mobile screen and is centered */
+    h1 {
+        font-size: 24px;
+    }
+
+    /* Adjust main content for better readability */
+    .main {
+        margin: 10px 0;
+    }
+
+    /* Tables: Allow them to scroll horizontally on small screens */
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+}
