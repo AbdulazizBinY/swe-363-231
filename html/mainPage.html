@@ -17,7 +17,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500&family=Onest:wght@300&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/css/mobile.css">
     <link rel="stylesheet" href="/css/desktop.css">
     <link id="stylesheet" rel="stylesheet" href="/css/dark.css">
 
@@ -42,16 +41,19 @@
                             <a class="nav-link" href="contactPage.html">Contact</a>
                             <a class="nav-link" href="Hire.html">Hire Me</a>
                             <a class="nav-link" href="mainPage-ar.html">العربية <i class="fi fi-sa"></i></a>
-                            <a class="nav-link" href="#"><i class="fa-solid fa-circle-half-stroke"></i></a>
+                            <button id="themeSwitcher" class="btn btn-link nav-link p-0 border-0"
+                                style="background: transparent;">
+                                <i class="fa-solid fa-circle-half-stroke"></i>
+                            </button>
                         </div>
                     </div>
-                </div>
             </nav>
         </header>
 
 
         <main class="text-center mb-5"> <!-- Cover Image and Heading -->
-            <img class="img-fluid" src="/assets/Laptop.avif" alt="Laptop image">
+            <img src="/assets/me.png" class="img-thumbnail rounded-circle mt-3" style="width: 100px; height: 100px;"
+                alt="Personal image">
             <h2 class="text-secondary"><small>Hi, my name is </small><em id="the-most-important">Abdulaziz
                     Binyabis</em><br> I am a Software Engineer. </h2>
             <h3>Try <a href="ttt.html" style="text-decoration: none; font-style: italic;">Tic Tac Toc</a> game!</h3>
@@ -61,21 +63,21 @@
             <article id="details">
                 <!-- Projects Information -->
                 <div class="border p-3 mb-3">
-                    <legend class="h4">ICS321: <em>Database project</em></legend>
+                    <legend> ICS321: <em>Database project</em></legend>
                     <p>In this project, we design a website that can manage and record football matches with an
                         organized
                         database system.</p>
                 </div>
 
                 <div class="border p-3 mb-3">
-                    <legend class="h4">SWE326: <em>Software testing</em></legend>
+                    <legend> SWE326: <em>Software testing</em></legend>
                     <p>In this project, we were asked to test a new system for KFUPM faculty and try to find the bugs.
                     </p>
                 </div>
             </article>
 
             <!-- Hobbies Table -->
-            <table class="table table-striped">
+            <table class="table table-dark table-striped table-hover">
                 <caption class="h5">Abdulaziz's Hobbies</caption>
                 <thead>
                     <tr>

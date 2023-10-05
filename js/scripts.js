@@ -27,12 +27,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.getElementById('changeTheme').addEventListener('click', function () {
-    var stylesheet = document.getElementById('stylesheet');
+document.getElementById('themeSwitcher').addEventListener('click', function () {
+    const body = document.body;
 
-    if (stylesheet.getAttribute('href') == 'dark.css') {
-        stylesheet.setAttribute('href', 'light.css');
+    if (body.classList.contains('light-theme')) {
+        body.classList.remove('light-theme');
+        body.classList.add('dark-theme');
     } else {
-        stylesheet.setAttribute('href', 'dark.css');
+        body.classList.remove('dark-theme');
+        body.classList.add('light-theme');
     }
 });

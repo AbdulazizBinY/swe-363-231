@@ -21,6 +21,25 @@ body {
   background-color: #00010D;
 }
 
+p {
+  color: #cdc3c3;
+}
+
+/* light and dark theme switcher */
+body.light-theme {
+  background-color: #F2E6D8; 
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+  animation: 2ms;
+}
+
+body.dark-theme {
+  background-color: #00010D; 
+  color: #00010D;
+  transition: background-color 0.3s, color 0.3s;
+  animation: 2ms;
+}
+
 em {
   color: blue;
 }
@@ -148,7 +167,6 @@ input[type="radio"] {
 /* Table Styles */
 table {
   text-align: center;
-  background-color: #9c8c82;
   border-collapse: collapse;
   width: 100%;
   margin-bottom: 1rem;
@@ -159,13 +177,6 @@ thead {
   text-transform: uppercase;
 }
 
-tbody tr:nth-child(even) {
-  background-color: #80675e8e;
-}
-
-tbody tr:hover {
-  background-color: #D9D2D0;
-}
 
 .h5 {
   text-align: center;

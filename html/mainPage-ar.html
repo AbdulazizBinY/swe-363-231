@@ -17,7 +17,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500&family=Onest:wght@300&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/css/mobile.css">
     <link rel="stylesheet" href="/css/desktop.css">
     <link id="stylesheet" rel="stylesheet" href="/css/dark.css">
 
@@ -36,13 +35,15 @@
                     <input type="checkbox" id="menuToggle" class="d-none">
                     <label for="menuToggle" id="hamburger" class="navbar-toggler-icon custom-toggler"></label>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav ms-auto">
+                        <div class="navbar-nav">
                             <a class="nav-link active" href="#main">نبذة</a>
                             <a class="nav-link" href="#details">التفاصيل</a>
                             <a class="nav-link" href="contactPage-ar.html">معلومات التواصل</a>
                             <a class="nav-link" href="Hire-ar.html">وضفني لديك</a>
                             <a class="nav-link" href="mainPage.html">English <i class="fi fi-us"></i></a>
-                            <a class="nav-link" href="#"><i class="fa-solid fa-circle-half-stroke"></i></a>
+                            <button id="themeSwitcher" class="btn btn-link nav-link p-0 border-0"
+                                style="background: transparent;">
+                                <i class="fa-solid fa-circle-half-stroke"></i>
                         </div>
                     </div>
                 </div>
@@ -50,7 +51,8 @@
         </header>
 
         <main class="text-center mb-5">
-            <img class="img-fluid" src="/assets/Laptop.avif" alt="عبدالعزيز بن يابس">
+            <img src="/assets/me.png" class="img-thumbnail rounded-circle mt-3" style="width: 100px; height: 100px;"
+                alt="Personal image">
             <h2 class="text-secondary"><small>مرحبًا، اسمي </small><em id="the-most-important">عبدالعزيز بن
                     يابس</em><br>
                 أنا مهندس برمجيات.</h2>
