@@ -27,14 +27,14 @@ p {
 
 /* light and dark theme switcher */
 body.light-theme {
-  background-color: #F2E6D8; 
+  background-color: #F2E6D8;
   color: #333;
   transition: background-color 0.3s, color 0.3s;
   animation: 2ms;
 }
 
 body.dark-theme {
-  background-color: #00010D; 
+  background-color: #00010D;
   color: #00010D;
   transition: background-color 0.3s, color 0.3s;
   animation: 2ms;
@@ -50,6 +50,15 @@ legend {
 
 #the-most-important {
   color: gold;
+}
+
+.projects {
+  text-decoration: none;
+  color: #cdc3c3;
+}
+
+.projects:hover {
+  color: rgb(255, 195, 99);
 }
 
 /* Navigation Bar Styles */
@@ -121,6 +130,14 @@ legend {
 /* Form Styles */
 form {
   text-align: center;
+}
+
+.text-light {
+  text-decoration: none;
+}
+
+.text-light:hover {
+  color: rgb(255, 195, 99);
 }
 
 h3 {
