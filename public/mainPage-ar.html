@@ -37,8 +37,8 @@
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
                             <a class="nav-link active" href="#main">نبذة</a>
-                            <a class="nav-link" href="#details">التفاصيل</a>
-                            <a class="nav-link" href="contactPage-ar.html">معلومات التواصل</a>
+                            <a class="nav-link" href="#details-ar">التفاصيل</a>
+                            <a class="nav-link" href="#contact">معلومات التواصل</a>
                             <a class="nav-link" href="Hire-ar.html">وضفني لديك</a>
                             <a class="nav-link" href="mainPage.html">English <i class="fi fi-us"></i></a>
                             <button id="themeSwitcher" class="btn btn-link nav-link p-0 border-0"
@@ -55,11 +55,19 @@
                 alt="Personal image">
             <h2 class="text-secondary"><small>مرحبًا، اسمي </small><em id="the-most-important">عبدالعزيز بن
                     يابس</em><br>
-                أنا مهندس برمجيات.</h2>
+                أنا مهندس برمجيات.</h2> <br>
+            <p class="lead">كشخص متحمس للغاية، قمت بتطوير شغف قوي لتطوير الويب وتحليل البيانات. أؤمن بقوة دمج واجهات
+                الويب البديهية مع الرؤى المستندة إلى البيانات لخلق تجارب مستخدمه معنوية. يدفعني حماسي للتكنولوجيا لصقل
+                مهاراتي باستمرار ومواكبة أحدث الاتجاهات في الصناعة.
+            </p>
         </main>
 
+
+        <!-- Horizontal spreator -->
+        <hr class="bg-light my-5" style="height: 30px; border: none;">
+
         <div class="container mt-5">
-            <article id="details">
+            <article id="details-ar">
                 <div class="border p-3 mb-3">
                     <fieldset>
                         <legend>ICS321: <em>مشروع قاعدة بيانات</em></legend>
@@ -111,6 +119,53 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+
+
+        <!-- Horizontal spreator -->
+        <hr class="bg-light my-5" style="height: 30px; border: none;">
+
+        <div class="container mt-4" id="contact">
+            <h1 id="head1" class="text-center mb-4">معلومات التواصل</h1>
+
+            <!-- P tags that have contact information -->
+            <div class="mb-3">
+                <strong style="color: #cdc3c3;">البريد الإلكتروني:</strong> <a class="text-light"
+                    href="mailto:Abdulazizbinyabis@gmail.com">Abdulazizbinyabis@gmail.com</a>
+            </div>
+            <div class="mb-3">
+                <strong style="color: #cdc3c3;">الهاتف:</strong> <a class="text-light"
+                    href="tel:+966555029876">+966555029876</a>
+            </div>
+            <div class="mb-4">
+                <strong style="color: #cdc3c3;">لينكدإن:</strong> <a class="text-light"
+                    href="https://www.linkedin.com/in/abdulaziz-binyabis-458117224/">@Abdulazizbinyabis</a>
+            </div>
+
+            <!-- Contact form -->
+            <h3 class="mb-4">نموذج التواصل:</h3>
+            <form action="conformationPage.html" method="post" autocomplete="on">
+                <div class="mb-3">
+                    <label id="name" for="name" class="form-label">الاسم:</label>
+                    <input class="form-control" type="text" id="name" name="name" required autocomplete="name"
+                        placeholder="عبدالعزيز بن يابس">
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">البريد الإلكتروني:</label>
+                    <input class="form-control" type="email" id="email" name="email" required autocomplete="email"
+                        placeholder="name@example.com">
+                </div>
+
+                <div class="mb-3">
+                    <label for="floatingTextarea">الرسالة</label>
+                    <textarea class="form-control" placeholder="اكتب الرسالة هنا..." id="floatingTextarea"></textarea>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <input type="submit" value="Submit" class="btn btn-primary mx-auto">
+                </div>
+            </form>
         </div>
 
         <footer class="mt-5 bg-dark text-light">
