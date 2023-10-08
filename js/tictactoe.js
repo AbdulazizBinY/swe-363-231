@@ -1,8 +1,39 @@
 let turn = "X";
 let gameEnded = false;
 let cells = document.querySelectorAll(".cell");
+let currentCellIndex = 0; // To keep track of the currently selected cell using the keyboard
+
+// Highlight the initial cell for keyboard navigation
+cells[currentCellIndex].style.border = '4px solid yellow';
 
 cells.forEach(cell => cell.addEventListener("click", cellClicked));
+
+// Keyboard event listener
+document.addEventListener("keydown", handleKeyPress);
+
+function handleKeyPress(event) {
+    cells[currentCellIndex].style.border = '4px solid #343a40';
+
+    switch (event.key) {
+        case 'ArrowLeft':
+            currentCellIndex = (currentCellIndex - 1 + cells.length) % cells.length;
+            break;
+        case 'ArrowRight':
+            currentCellIndex = (currentCellIndex + 1) % cells.length;
+            break;
+        case 'ArrowUp':
+            currentCellIndex = (currentCellIndex - 3 + cells.length) % cells.length;
+            break;
+        case 'ArrowDown':
+            currentCellIndex = (currentCellIndex + 3) % cells.length;
+            break;
+        case ' ':
+            cellClicked({ target: cells[currentCellIndex] });
+            break;
+    }
+
+    cells[currentCellIndex].style.border = '4px solid yellow'; // Highlight the currently selected cell
+}
 
 function cellClicked(event) {
     let cell = event.target;
