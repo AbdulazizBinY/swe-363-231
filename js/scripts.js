@@ -166,3 +166,42 @@ function draw(event) {
 function clearCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
+
+// Screensaver Logic
+const screensaverDiv = document.getElementById('screensaver');
+
+// Three.js setup for the screensaver (using a rotating torus as an example)
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+screensaverDiv.appendChild(renderer.domElement);
+const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
+const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+const torus = new THREE.Mesh(geometry, material);
+scene.add(torus);
+camera.position.z = 30;
+function animateScreensaver() {
+    requestAnimationFrame(animateScreensaver);
+    torus.rotation.x += 0.01;
+    torus.rotation.y += 0.01;
+    renderer.render(scene, camera);
+}
+
+// User inactivity detection
+let inactivityTimer;
+function resetTimer() {
+    clearTimeout(inactivityTimer);
+    inactivityTimer = setTimeout(showScreensaver, 60000); // 1 minute
+}
+
+function showScreensaver() {
+    document.getElementById('screensaver').style.display = 'block';
+    animateScreensaver();
+}
+
+// Add the event listeners to reset the inactivity timer
+document.addEventListener('mousemove', resetTimer);
+document.addEventListener('keydown', resetTimer);
+document.addEventListener('scroll', resetTimer);
+resetTimer();  // Start the timer for the first time
