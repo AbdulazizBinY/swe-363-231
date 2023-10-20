@@ -1,3 +1,4 @@
+
 let turn = "X";
 let gameEnded = false;
 let cells = document.querySelectorAll(".cell");
@@ -11,9 +12,12 @@ cells.forEach(cell => cell.addEventListener("click", cellClicked));
 // Keyboard event listener
 document.addEventListener("keydown", handleKeyPress);
 
-function handleKeyPress(event) {
+const handleKeyPress = (event) => {
     cells[currentCellIndex].style.border = '4px solid #343a40';
+    navigateGame(event);
+};
 
+const navigateGame = (event) => {
     switch (event.key) {
         case 'ArrowLeft':
             currentCellIndex = (currentCellIndex - 1 + cells.length) % cells.length;
@@ -27,13 +31,9 @@ function handleKeyPress(event) {
         case 'ArrowDown':
             currentCellIndex = (currentCellIndex + 3) % cells.length;
             break;
-        case ' ':
-            cellClicked({ target: cells[currentCellIndex] });
-            break;
     }
-
-    cells[currentCellIndex].style.border = '4px solid yellow'; // Highlight the currently selected cell
-}
+    cells[currentCellIndex].style.border = '4px solid yellow';
+};
 
 function cellClicked(event) {
     let cell = event.target;
