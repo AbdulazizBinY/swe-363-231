@@ -1,43 +1,34 @@
-
 let turn = "X";
 let gameEnded = false;
 let cells = document.querySelectorAll(".cell");
-let currentCellIndex = 0; // To keep track of the currently selected cell using the keyboard
+let currentCellIndex = 0;  // To keep track of the currently selected cell using the keyboard
 
 // Highlight the initial cell for keyboard navigation
 cells[currentCellIndex].style.border = '4px solid yellow';
 
 cells.forEach(cell => cell.addEventListener("click", cellClicked));
 
-// Keyboard event listener
 document.addEventListener("keydown", handleKeyPress);
 
-const handleKeyPress = (event) => {
+function handleKeyPress(event) {
     cells[currentCellIndex].style.border = '4px solid #343a40';
-    navigateGame(event);
-};
-
-const navigateGame = (event) => {
-    switch (event.key) {
-        case 'ArrowLeft':
-            currentCellIndex = (currentCellIndex - 1 + cells.length) % cells.length;
-            break;
-        case 'ArrowRight':
-            currentCellIndex = (currentCellIndex + 1) % cells.length;
-            break;
-        case 'ArrowUp':
-            currentCellIndex = (currentCellIndex - 3 + cells.length) % cells.length;
-            break;
-        case 'ArrowDown':
-            currentCellIndex = (currentCellIndex + 3) % cells.length;
-            break;
-    }
+    navigateGame(event.key);
     cells[currentCellIndex].style.border = '4px solid yellow';
-};
+}
+
+function navigateGame(key) {
+    const navigation = {
+        'ArrowLeft': -1,
+        'ArrowRight': 1,
+        'ArrowUp': -3,
+        'ArrowDown': 3
+    };
+    currentCellIndex = (currentCellIndex + navigation[key] + cells.length) % cells.length;
+}
 
 function cellClicked(event) {
     let cell = event.target;
-    if (cell.innerText === "" && !gameEnded) {
+    if (!cell.innerText && !gameEnded) {
         addLetter(cell);
         checkWinner();
     }
@@ -55,17 +46,19 @@ function checkWinner() {
         [0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]
     ];
 
-    for (let combo of combos) {
+    const winningCombo = combos.find(combo => {
         const [a, b, c] = combo;
-        if (cells[a].innerText && cells[a].innerText === cells[b].innerText && cells[a].innerText === cells[c].innerText) {
-            gameEnded = true;
-            combo.forEach(i => cells[i].classList.add('won'));
-            document.getElementById("turn").innerText = cells[a].innerText + " Wins!";
-            return;
-        }
+        return cells[a].innerText && cells[a].innerText === cells[b].innerText && cells[a].innerText === cells[c].innerText;
+    });
+
+    if (winningCombo) {
+        gameEnded = true;
+        winningCombo.forEach(i => cells[i].classList.add('won'));
+        document.getElementById("turn").innerText = cells[winningCombo[0]].innerText + " Wins!";
+        return;
     }
 
-    if ([...cells].every(cell => cell.innerText !== "")) {
+    if ([...cells].every(cell => cell.innerText)) {
         gameEnded = true;
         document.getElementById("turn").innerText = "Draw!";
     }
