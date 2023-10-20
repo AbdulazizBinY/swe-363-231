@@ -1,43 +1,46 @@
+// Toggle the navigation menu visibility
 document.getElementById('menuToggle').addEventListener('change', function () {
-    var navContent = document.getElementById('navbarNavAltMarkup');
-    if (this.checked) {
-        navContent.classList.add('show');
-    } else {
-        navContent.classList.remove('show');
-    }
+    const navContent = document.getElementById('navbarNavAltMarkup');
+    toggleMenuVisibility(navContent);
 });
 
-window.addEventListener('load', function () {
-    setTimeout(function () {
+const toggleMenuVisibility = (navContent) => {
+    if (navContent.classList.contains('show')) {
+        navContent.classList.remove('show');
+    } else {
+        navContent.classList.add('show');
+    }
+};
+
+// Show the site content and hide the loader on window load
+window.addEventListener('load', () => {
+    setTimeout(() => {
         document.querySelector('.loader').style.display = 'none';
         document.querySelector('.site-content').classList.remove('d-none');
     }, 2000);
 });
 
+// Handle hover events for the navbar and the hamburger icon
 document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.querySelector('.navbar');
     const hamburger = document.getElementById('hamburger');
 
-    hamburger.addEventListener('mouseenter', function () {
-        navbar.classList.add('show-links');
-    });
-
-    navbar.addEventListener('mouseleave', function () {
-        navbar.classList.remove('show-links');
-    });
+    hamburger.addEventListener('mouseenter', () => navbar.classList.add('show-links'));
+    navbar.addEventListener('mouseleave', () => navbar.classList.remove('show-links'));
 });
 
-document.getElementById('themeSwitcher').addEventListener('click', function () {
-    const body = document.body;
+document.getElementById('themeSwitcher').addEventListener('click', () => {
+    toggleTheme(document.body);
+});
 
-    if (body.classList.contains('light-theme')) {
-        body.classList.remove('light-theme');
-        body.classList.add('dark-theme');
+const toggleTheme = (bodyElement) => {
+    if (bodyElement.classList.contains('light-theme')) {
+        bodyElement.classList.replace('light-theme', 'dark-theme');
     } else {
-        body.classList.remove('dark-theme');
-        body.classList.add('light-theme');
+        bodyElement.classList.replace('dark-theme', 'light-theme');
     }
-});
+};
+
 
 
 const hobbies = [
