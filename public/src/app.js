@@ -3,7 +3,7 @@ const app = express();
 
 
 const path = require('path')
-app.use('/static', express.static(path.join(__dirname, '/public/mainPage.html')))
+app.use('/static', express.static(path.join(__dirname, '/public/mainPage.html'))) // Open the main page.
 
 
 app.use(express.urlencoded({ extended: true }));
