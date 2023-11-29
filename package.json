@@ -8,7 +8,7 @@
     "react-dom": "^18.2.0"
   },
   "scripts": {
-    "start": "node app.js"
+    "start": "node public/src/app.js"
   }
 }
 
