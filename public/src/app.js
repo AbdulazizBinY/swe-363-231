@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 
 
-var connect = require("connect");
+const path = require('path')
+app.use('/static', express.static(path.join(__dirname, '/public/mainPage.html')))
 
-var app = connect.createServer().use(connect.static(__dirname + '/public/mainPage.html'));
 
 app.use(express.urlencoded({ extended: true }));
 
