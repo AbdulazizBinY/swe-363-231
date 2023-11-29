@@ -1,6 +1,11 @@
 const express = require('express');
 const app = express();
 
+
+var connect = require("connect");
+
+var app = connect.createServer().use(connect.static(__dirname + '/public/mainPage.html'));
+
 app.use(express.urlencoded({ extended: true }));
 
 const processForm = (req, res, next) => { // Until now, no need to store anything.
