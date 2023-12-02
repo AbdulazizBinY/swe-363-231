@@ -3,11 +3,11 @@ const app = express();
 const path = require('path');
 
 // Serve static files from the 'public' directory
-app.use('/static', express.static(path.join(__dirname, 'public')));
+app.use('/static', express.static(path.join(__dirname, '..', 'public')));
 
 // Serve mainPage.html at the root route
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/mainPage.html'));
+    res.sendFile(path.join(__dirname, '..', 'mainPage.html'));
 });
 
 app.use(express.urlencoded({ extended: true }));
