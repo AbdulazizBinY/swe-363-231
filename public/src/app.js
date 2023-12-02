@@ -1,19 +1,23 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 
+// Serve static files from the 'public' directory
+app.use('/static', express.static(path.join(__dirname, 'public')));
 
-const path = require('path')
-app.use('/static', express.static(path.join(__dirname, '/public/mainPage.html'))) // Open the main page.
-
+// Serve mainPage.html at the root route
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/mainPage.html'));
+});
 
 app.use(express.urlencoded({ extended: true }));
 
-const processForm = (req, res, next) => { // Until now, no need to store anything.
+const processForm = (req, res, next) => {
     console.log('Processing form data:', req.body);
     next();
 };
 
-app.post('/submit-form', processForm, (req, res) => { // This the form of the contact in the mainHTML file (main page)
+app.post('/submit-form', processForm, (req, res) => {
     res.send('Form submission processed');
 });
 
