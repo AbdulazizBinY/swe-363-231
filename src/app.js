@@ -2,13 +2,15 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-// Serve static files from the 'src' directory within the 'public' directory
-app.use('/public', express.static(path.join(__dirname)));
+// Serve static files from the 'src' directory
+app.use('/src', express.static(path.join(__dirname, 'src')));
 
-// Serve mainPage.html at the root route from the 'public' directory
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, '..', 'public')));
+
+// Serve mainPage.html at the root route
 app.get('/', (req, res) => {
-    // Adjust the path to go up one directory to 'public' and then serve 'mainPage.html'
-    res.sendFile(path.join(__dirname, '..', 'mainPage.html'));
+    res.sendFile(path.join(__dirname, '..', 'public', 'mainPage.html'));
 });
 
 app.use(express.urlencoded({ extended: true }));
